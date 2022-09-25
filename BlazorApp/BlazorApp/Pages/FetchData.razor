@@ -1,0 +1,134 @@
+﻿@page "/fetchdata"
+@using System.Text.Json.Nodes
+@inject HttpClient Http
+
+<PageTitle>Weather forecast</PageTitle>
+
+<h1>Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<h4>Enter city</h4>
+<input type="text" @bind="@City"/>
+<button @onclick="GetWeatherForecast">Search</button>
+<br />
+<br />
+
+
+@if (forecasts == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    var today = DateTime.Today;
+    var counter = 0;
+    <h4>Region: @forecasts.region</h4>
+    <h5>Today: @today.ToShortDateString() @forecasts.currentConditions.dayhour</h5>
+    <p>Wind: @forecasts.currentConditions.wind.km Km</p>
+    <p>Temp: @forecasts.currentConditions.temp.c C</p>
+    <p>Summary: @forecasts.currentConditions.comment</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Summary</th>
+                <th>Max Temp. (C)</th>
+                <th>Max Temp. (F)</th>
+                <th>Min Temp. (C)</th>
+                <th>Min Temp. (F)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var forecast in forecasts.next_days)
+            {
+                 today = DateTime.Today.AddDays(counter);
+                <tr>
+                    <td>@forecast.day  @today.ToShortDateString()</td>
+                    <td>@forecast.comment</td>
+                    <td>@forecast.max_temp.c</td>
+                    <td>@forecast.max_temp.f</td>
+                    <td>@forecast.min_temp.c</td>
+                    <td>@forecast.min_temp.f</td>
+                </tr>
+                counter++;
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private WeatherForecast? forecasts;
+
+    private string City = "Blagoevgrad";
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast>("Blagoevgrad");
+    }
+
+    private async Task GetWeatherForecast()
+    {
+        forecasts = await Http.GetFromJsonAsync<WeatherForecast>(City);
+    }
+
+    public partial class WeatherForecast
+    {
+        public string region { get; set; }
+        public Currentconditions currentConditions { get; set; }
+        public Next_Days[] next_days { get; set; }
+        public Contact_Author contact_author { get; set; }
+        public string data_source { get; set; }
+    }
+
+    public class Currentconditions
+    {
+        public string dayhour { get; set; }
+        public Temp temp { get; set; }
+        public string precip { get; set; }
+        public string humidity { get; set; }
+        public Wind wind { get; set; }
+        public string iconURL { get; set; }
+        public string comment { get; set; }
+    }
+
+    public class Temp
+    {
+        public int c { get; set; }
+        public int f { get; set; }
+    }
+
+    public class Wind
+    {
+        public int km { get; set; }
+        public int mile { get; set; }
+    }
+
+    public class Contact_Author
+    {
+        public string email { get; set; }
+        public string auth_note { get; set; }
+    }
+
+    public class Next_Days
+    {
+        public string day { get; set; }
+        public string comment { get; set; }
+        public Max_Temp max_temp { get; set; }
+        public Min_Temp min_temp { get; set; }
+        public string iconURL { get; set; }
+    }
+
+    public class Max_Temp
+    {
+        public int c { get; set; }
+        public int f { get; set; }
+    }
+
+    public class Min_Temp
+    {
+        public int c { get; set; }
+        public int f { get; set; }
+    }
+
+}

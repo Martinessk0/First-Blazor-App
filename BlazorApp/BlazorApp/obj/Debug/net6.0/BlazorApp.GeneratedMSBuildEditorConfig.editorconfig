@@ -1,0 +1,67 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = BlazorApp
+build_property.RootNamespace = BlazorApp
+build_property.ProjectDir = E:\GitHub\First-Blazor-App\BlazorApp\BlazorApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\GitHub\First-Blazor-App\BlazorApp\BlazorApp
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Pages/Converter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udmVydGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Pages/FetchData.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Pages/ShoppingList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hvcHBpbmdMaXN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Shared/Item.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEl0ZW0ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-3dsd3z3yec
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-7cxxmz0cwl
+
+[E:/GitHub/First-Blazor-App/BlazorApp/BlazorApp/Shared/ShoppingListLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFNob3BwaW5nTGlzdExheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-m9r4yqqmi0
